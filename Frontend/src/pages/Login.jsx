@@ -5,6 +5,8 @@ import axios from 'axios';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
+console.log(import.meta.env.VITE_API_URL);
+
 const Login = () => {
     const [ form, setForm ] = useState({ email: '', password: '' });
     const [ submitting, setSubmitting ] = useState(false);
