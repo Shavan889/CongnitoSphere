@@ -21,9 +21,7 @@ import {
   setChats,
 } from "../store/chatSlice.js";
 
-const API_BASE_URL = window.location.hostname === "localhost"
-  ? "http://localhost:3000"
-  : "https://cohort-1-project-chat-gpt.onrender.com";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
 const Home = () => {
   const dispatch = useDispatch();
